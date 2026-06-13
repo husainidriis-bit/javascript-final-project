@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Connect | Donations</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NGO Connect
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="volunteers.html">Volunteers</a></li>
+            <li><a href="donations.html">Donations</a></li>
+        </ul>
+
+        <button id="themeBtn" class="btn btn-success">
+            Dark Mode
+        </button>
+
+    </nav>
+
+    <div class="container">
+
+        <h1 class="page-title">
+            Donation Management
+        </h1>
+
+        <!-- Donation Form -->
+
+        <section class="form-section">
+
+            <h2>Record Donation</h2>
+
+            <form id="donationForm">
+
+                <div class="form-group">
+                    <label>Donor Name</label>
+                    <input
+                        type="text"
+                        id="donorName"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        id="donorEmail"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Donation Amount ($)</label>
+                    <input
+                        type="number"
+                        id="donationAmount"
+                        min="1"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Country</label>
+                    <input
+                        type="text"
+                        id="countryInput"
+                        placeholder="Kenya"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Date</label>
+                    <input
+                        type="date"
+                        id="donationDate"
+                        required>
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+                    Record Donation
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Country Information -->
+
+        <section
+            id="countryInfo"
+            class="country-card">
+
+            <h2>Country Information</h2>
+
+            <img
+                id="countryFlag"
+                src=""
+                alt="Flag">
+
+            <p>
+                <strong>Capital:</strong>
+                <span id="countryCapital">-</span>
+            </p>
+
+            <p>
+                <strong>Population:</strong>
+                <span id="countryPopulation">-</span>
+            </p>
+
+            <p>
+                <strong>Currency:</strong>
+                <span id="countryCurrency">-</span>
+            </p>
+
+        </section>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchDonation"
+                placeholder="Search donor name...">
+
+        </div>
+
+        <!-- Donation Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Donor</th>
+                        <th>Email</th>
+                        <th>Amount</th>
+                        <th>Country</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="donationTableBody">
+
+                    <tr>
+                        <td colspan="6" style="text-align:center;">
+                            No donations recorded yet
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="js/App.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/donation.js"></script>
+
+</body>
+</html>

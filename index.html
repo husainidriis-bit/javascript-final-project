@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Connect | Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+     <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            NGO Connect
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="volunteers.html">Volunteers</a></li>
+            <li><a href="donations.html">Donations</a></li>
+        </ul>
+
+        <button id="themeBtn" class="btn btn-success">
+            Dark Mode
+        </button>
+
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <h1 class="page-title">
+            Dashboard Overview
+        </h1>
+
+        <!-- STATS CARDS -->
+        <section class="dashboard-grid">
+
+            <div class="card">
+                <h3>Total Volunteers</h3>
+                <p id="volunteerCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Donations</h3>
+                <p id="donationCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Amount Raised</h3>
+                <p id="totalRaised">$0</p>
+            </div>
+
+        </section>
+
+        <!-- DONATION GOAL -->
+        <section class="card" style="margin-top:20px;">
+
+            <h2>Donation Goal Progress</h2>
+
+            <p>
+                Goal:
+                <strong>$10,000</strong>
+            </p>
+
+            <div class="progress-container">
+
+                <div class="progress-bar">
+                    <div
+                        id="progressFill"
+                        class="progress-fill">
+                    </div>
+                </div>
+
+                <p
+                    id="progressText"
+                    style="margin-top:10px;">
+                    0%
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- RECENT ACTIVITIES -->
+        <section
+            class="card"
+            style="margin-top:20px;">
+
+            <h2>Recent Activities</h2>
+
+            <ul
+                id="activityList"
+                class="activity-list">
+
+                <li>
+                    No activities recorded yet.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </div> 
+
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Connect | Volunteers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            NGO Connect
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="volunteers.html">Volunteers</a></li>
+            <li><a href="donations.html ">Donations</a></li>
+        </ul>
+
+        <button id="themeBtn" class="btn btn-success">
+            Dark Mode
+        </button>
+
+    </nav>
+
+    <div class="container">
+
+        <h1 class="page-title">
+            Volunteer Management
+        </h1>
+
+        <!-- Volunteer Form -->
+
+        <section class="form-section">
+
+            <h2>Add Volunteer</h2>
+
+            <form id="volunteerForm">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input
+                        type="text"
+                        id="volunteerName"
+                        placeholder="Enter full name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        id="volunteerEmail"
+                        placeholder="Enter email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input
+                        type="tel"
+                        id="volunteerPhone"
+                        placeholder="Enter phone number"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label>Skills</label>
+                    <input
+                        type="text"
+                        id="volunteerSkills"
+                        placeholder="Teaching, Medical, Fundraising">
+                </div>
+
+                <div class="form-group">
+                    <label>Availability</label>
+                    <select id="volunteerAvailability">
+                        <option value="Weekdays">Weekdays</option>
+                        <option value="Weekends">Weekends</option>
+                        <option value="Full Time">Full Time</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="volunteerStatus">
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                        <option value="On Leave">On Leave</option>
+                    </select>
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+                    Add Volunteer
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchVolunteer"
+                placeholder="Search volunteers by name...">
+
+        </div>
+
+        <!-- Volunteers Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Skills</th>
+                        <th>Availability</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="volunteerTableBody">
+
+                    <tr>
+                        <td colspan="7" style="text-align:center;">
+                            No volunteers added yet
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="js/App.js"></script>
+    <script src="js/voluntrees.js"></script>
+
+</body>
+</html>
